@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --mainBlue: #3161a7;
+  --secondBlue: #005f92;
+  --thirdBlue: #0091bb;
+  --fourBlue: #009ac9;
+  --lightBlue: #64bdda;
+  --otherBlue: #407ccc;
   --grayParagraph: #2e2e2e;
   --font: "Red Hat Display", sans-serif;
 }
@@ -33,6 +38,13 @@ p {
   }
 }
 
+.main-gray-wrapper {
+  width: 100%;
+  background-color: #f4f7f8;
+  padding-top: 20px;
+  margin-top: 60px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -59,6 +71,48 @@ a {
   background-color: #fff;
   color: var(--mainBlue);
   cursor: pointer;
+}
+
+.outlined-btn {
+  border-radius: 15px;
+  background-color: var(--mainBlue);
+  padding: 12px 34px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  border: 1px solid var(--mainBlue);
+  transition: 400ms;
+}
+@media (max-width: 768px) {
+  .outlined-btn {
+    font-size: 15px;
+    padding: 8px 26px;
+  }
+}
+.outlined-btn:hover {
+  background-color: #fff;
+  color: var(--mainBlue);
+  cursor: pointer;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  text-align: center;
+  transition: 300ms;
+}
+.card:hover {
+  -webkit-box-shadow: 10px 10px 78px -64px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 78px -64px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 78px -64px rgba(0, 0, 0, 0.75);
+}
+.card img {
+  height: 220px;
+  object-fit: cover;
 }
 
 .main-header {
@@ -108,6 +162,66 @@ a {
 }
 .hero__content p {
   color: var(--grayParagraph);
+}
+
+.cards-content-section {
+  margin-top: 30px;
+  align-items: center;
+}
+.cards-content-section__text h2 {
+  text-align: center;
+  font-size: 35px;
+}
+.cards-content-section__cards {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  max-width: 1150px;
+  width: 100%;
+}
+@media (max-width: 1110px) {
+  .cards-content-section__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .cards-content-section__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.benefits-content-section {
+  margin-top: 30px;
+  align-items: center;
+}
+.benefits-content-section__text h2 {
+  text-align: center;
+  font-size: 35px;
+}
+.benefits-content-section__benefitsCards {
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+.benefits-content-section__benefitsCards i {
+  font-size: 50px;
+  color: var(--lightBlue);
+}
+@media (max-width: 1110px) {
+  .benefits-content-section__benefitsCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .benefits-content-section__benefitsCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
